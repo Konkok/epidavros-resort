@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "home": "Home",
+    "availability": "Availability",
+    "about": "About",
+    "amenities": "Amenities",
+    "area": "The Area",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "accommodation": "Accommodation"
+  },
+  "hero": {
+    "label": "Welcome to Epidavros",
+    "title1": "Nature, Serenity",
+    "title2": "& Refined Luxury",
+    "subtitle": "Among towering pines, ancient olive groves, and fragrant lemon trees — an invitation to experience the perfect harmony between breathtaking natural beauty and the endless shimmer of the Saronic Gulf.",
+    "exploreVillas": "Explore Villas",
+    "bookStay": "Book Your Stay",
+    "stat1Value": "6",
+    "stat1Label": "Unique Villas",
+    "stat2Value": "1 km",
+    "stat2Label": "From the Beach",
+    "stat3Value": "4.9",
+    "stat3Label": "Guest Rating"
+  },
+  "booking": {
+    "label": "Live Availability",
+    "title": "Check Available Villas",
+    "subtitle": "Select your dates and we'll show you exactly which villas are free — with live pricing.",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "search": "Search",
+    "night_one": "{{count}} night",
+    "night_other": "{{count}} nights",
+    "guestHint": "{{nights}} · {{guests}} guests",
+    "searching": "Searching available villas…",
+    "errorMsg": "Could not fetch available listings. Please try again.",
+    "noResults": "No villas available for those dates",
+    "noResultsHint": "Try adjusting your check-in, check-out, or guest count.",
+    "available_one": "{{count}} villa available",
+    "available_other": "{{count}} villas available",
+    "bedroom_one": "{{count}} Bedroom",
+    "bedroom_other": "{{count}} Bedrooms",
+    "bathroom_one": "{{count}} Bath",
+    "bathroom_other": "{{count}} Baths",
+    "upTo": "Up to",
+    "bookNow": "Book Now",
+    "totalFees": "total incl. fees",
+    "perNight": "/ night",
+    "iframeTitle": "Search & Book Villas"
+  },
+  "about": {
+    "label": "Our Story",
+    "title1": "An Invitation to",
+    "title2": "Perfect Harmony",
+    "body1": "Nestled among towering pines, ancient olive groves, and fragrant lemon trees, Epidavros Resort is an invitation to experience the perfect harmony between breathtaking natural beauty, serene tranquility, and refined luxury — all just steps from the crystal shores of the Saronic Gulf.",
+    "body2": "For over two decades, our family has welcomed guests from around the world to this living garden by the sea. Every morning begins with a homemade breakfast under the olives; every evening ends with the endless glow of a Greek sunset painting the water gold.",
+    "feature1": "Beachfront Access",
+    "feature2": "Organic Garden",
+    "feature3": "Near Ancient Theatre",
+    "feature4": "Water Activities",
+    "established": "Est.",
+    "tourBtn": "Explore the Estate in 360°",
+    "tourModalTitle": "Akros Eco Estate"
+  },
+  "rooms": {
+    "explore360": "Explore 360° View",
+    "label": "Accommodation",
+    "title": "Find Your Perfect Villa",
+    "subtitle": "From cosy retreats to panoramic suites, each villa has been crafted to bring you closer to the magic of Epidavros.",
+    "filterAll": "All",
+    "viewPhotos": "photos",
+    "viewAll": "View all {{count}} photos",
+    "backToVillas": "Back to Villas",
+    "aboutVilla": "About this Villa",
+    "amenitiesTitle": "Amenities",
+    "viewsTitle": "Views & Location",
+    "beachAccess": "Beach Access (1 km)",
+    "statSize": "Size",
+    "statGuests": "Max Guests",
+    "checkAvailability": "Check Availability",
+    "enquire": "Send an Enquiry",
+    "priceNote": "Starting price per night · taxes included",
+    "perk1": "Free cancellation up to 7 days before",
+    "perk2": "No hidden fees",
+    "perk3": "Host greets you on arrival",
+    "category": {
+      "villa": "Villa",
+      "classic": "Classic",
+      "deluxe": "Deluxe",
+      "suite": "Suite",
+      "bungalow": "Bungalow",
+      "penthouse": "Penthouse"
+    },
+    "readMore": "Read more ↓",
+    "readLess": "Show less ↑",
+    "capacity_one": "{{count}} Guest",
+    "capacity_other": "{{count}} Guests",
+    "perNight": "/ night",
+    "bookNow": "Book Now",
+    "explore": "Explore Villa",
+    "amenity": {
+      "privateBalcony": "Private Balcony",
+      "seaView": "Sea View",
+      "kingBed": "King Bed",
+      "soakingTub": "Soaking Tub",
+      "airConditioning": "Air Conditioning",
+      "miniBar": "Mini Bar",
+      "privateTerrace": "Private Terrace",
+      "gardenView": "Garden View",
+      "queenBed": "Queen Bed",
+      "rainShower": "Rain Shower",
+      "safe": "Safe",
+      "doubleBed": "Double Bed",
+      "enSuiteBathroom": "En-Suite Bathroom",
+      "flatScreenTV": "Flat-Screen TV",
+      "wifi": "Wi-Fi",
+      "balcony": "Balcony",
+      "twoBedrooms": "2 Bedrooms",
+      "livingArea": "Living Area",
+      "largeTerrace": "Large Terrace",
+      "kitchenette": "Kitchenette",
+      "poolAccess": "Pool Access",
+      "privatePatio": "Private Patio",
+      "stoneWalls": "Stone Walls",
+      "outdoorShower": "Outdoor Shower",
+      "privatePlungePool": "Private Plunge Pool",
+      "panoramicViews": "360° Views",
+      "gourmetKitchen": "Gourmet Kitchen",
+      "butlerService": "Butler Service",
+      "premiumBar": "Premium Bar",
+      "jacuzzi": "Jacuzzi",
+      "fullKitchen": "Full Kitchen",
+      "washingMachine": "Washing Machine",
+      "sharedPool": "Shared Pool",
+      "privateParking": "Private Parking"
+    },
+    "villas": {
+      "voukamvilia": {
+        "subtitle": "Bougainvillea Villa",
+        "description": "Named after the cascading bougainvillea that frames its sun-drenched terrace, this villa is pure Mediterranean romance. A king-size bed, marble en-suite with a deep soaking tub, and unobstructed views of the Saronic Gulf — a sanctuary built for two."
+      },
+      "gardenia": {
+        "subtitle": "Garden Deluxe Room",
+        "description": "Surrounded by fragrant gardenias and shaded olive boughs, this serene room opens onto a private terrace where morning light filters softly through the trees. A queen bed, walk-in rain shower, and handcrafted local furnishings complete the picture."
+      },
+      "dafni": {
+        "subtitle": "Classic Double Room",
+        "description": "Named for the sacred laurel (dafni) of ancient Greece, this beautifully appointed room is a quiet retreat for two. Crisp whitewashed walls, a marble bathroom, and a small balcony overlooking the pine-clad hillside — simple and perfect."
+      },
+      "elia": {
+        "subtitle": "Family Suite",
+        "description": "Elia — the olive tree — has sheltered Greek families for millennia. This two-room suite does the same, with a master bedroom, a children's bunk room, a spacious living area, and a generous sea-view terrace where everyone can gather under the Greek sun."
+      },
+      "thymari": {
+        "subtitle": "Poolside Bungalow",
+        "description": "Wild thyme grows across the hillside above this ground-floor bungalow, filling the air with its scent on warm evenings. Step from your private stone patio straight into the sparkling pool. A king bed, exposed stone walls, and an outdoor shower complete the experience."
+      },
+      "rodia": {
+        "subtitle": "Panorama Penthouse",
+        "description": "The pomegranate — rodia — is a Greek symbol of abundance and joy. At the crown of the estate, this penthouse delivers both: 360° sea views, a private plunge pool on the terrace, a gourmet kitchen stocked with local produce, and bespoke design throughout."
+      }
+    }
+  },
+  "amenities": {
+    "label": "What We Offer",
+    "title": "Resort Amenities",
+    "subtitle": "Everything you need for an unforgettable Greek holiday is right here.",
+    "pool": {
+      "title": "Infinity Pool",
+      "desc": "Swim to the edge and gaze at the endless Saronic Gulf below."
+    },
+    "restaurant": {
+      "title": "Seaside Restaurant",
+      "desc": "Fresh-caught seafood, local produce, and traditional Greek recipes."
+    },
+    "spa": {
+      "title": "Wellness & Spa",
+      "desc": "Massage, aromatherapy, and yoga classes with sea-view terraces."
+    },
+    "boat": {
+      "title": "Boat Excursions",
+      "desc": "Daily trips to hidden coves, sea caves, and nearby islands."
+    },
+    "theatre": {
+      "title": "Theatre Visits",
+      "desc": "Guided tours to the ancient Epidaurus Theatre — 5 km away."
+    },
+    "bike": {
+      "title": "Bicycle Rentals",
+      "desc": "Explore the olive groves and coastal paths at your own pace."
+    },
+    "cooking": {
+      "title": "Greek Cooking Classes",
+      "desc": "Learn the secrets of traditional Mediterranean cuisine."
+    },
+    "wifi": {
+      "title": "High-Speed Wi-Fi",
+      "desc": "Fast and reliable connection throughout the entire resort."
+    }
+  },
+  "area": {
+    "label": "Explore the Region",
+    "title": "Discover Epidavros",
+    "subtitle": "A corner of Greece where ancient myth, Mediterranean nature, and crystalline sea come together in perfect harmony.",
+    "body1": "Nea Epidavros sits at the heart of the Argolid peninsula, where pine-clad mountains descend to the crystalline waters of the Saronic Gulf. Within a short drive you'll find UNESCO World Heritage sites, charming fishing villages, and some of the most beautiful beaches in the Peloponnese.",
+    "body2": "The estate itself sits within an ancient olive grove — a living Eco Farm producing olive oil, citrus and herbs. Culture, nature and history are not attractions you visit here; they are the air you breathe.",
+    "statUNESCO": "UNESCO Sites Nearby",
+    "statBeaches": "Beaches Within 10 km",
+    "statYears": "Years of History",
+    "poisTitle": "Points of Interest",
+    "onSite": "On-site",
+    "theatreName": "Ancient Theatre of Epidaurus",
+    "theatreDesc": "One of the best-preserved ancient theatres in the world — a UNESCO World Heritage Site with legendary acoustics. Home to the Athens-Epidaurus Festival every July and August.",
+    "asklepionName": "Asklepieion Sanctuary",
+    "asklepionDesc": "The most celebrated healing sanctuary of the ancient world, dedicated to Asclepius the god of medicine. Patients from across the Mediterranean came here seeking cures.",
+    "beachName": "Nea Epidavros Beach",
+    "beachDesc": "A peaceful pebble-and-sand beach on the Saronic Gulf, just minutes from the estate. Clear shallow waters perfect for swimming, snorkelling and long afternoon strolls.",
+    "paleaName": "Palea Epidavros",
+    "paleaDesc": "A charming fishing village with a small ancient theatre, a picturesque harbour, and fresh seafood tavernas — perfect for a relaxed evening.",
+    "nafplioName": "Nafplio",
+    "nafplioDesc": "Greece's first modern capital and one of the country's most romantic towns — Venetian architecture, the Palamidi fortress, and cobblestone alleyways await.",
+    "mycenaeName": "Mycenae",
+    "mycenaeDesc": "The legendary citadel of Agamemnon, birthplace of Mycenaean civilisation. The Lion Gate and Treasury of Atreus are among Europe's most iconic prehistoric monuments.",
+    "canalName": "Corinth Canal",
+    "canalDesc": "A marvel of 19th-century engineering that slices through the Isthmus of Corinth, connecting the Saronic and Corinthian gulfs. A spectacular sight from the bridge above.",
+    "farmName": "Akros Eco Farm",
+    "farmDesc": "Ancient olive groves, fragrant lemon trees, and organic gardens surround the estate — a living farm producing olive oil, citrus and herbs you can taste and take home.",
+    "activitiesTitle": "Experiences",
+    "act1": "Swimming & Snorkelling",
+    "act2": "Summer Theatre Festival",
+    "act3": "Hiking & Nature Walks",
+    "act4": "Fresh Seafood Tavernas",
+    "act5": "Olive Oil & Local Products",
+    "act6": "Boat Trips to Hidden Coves",
+    "gettingHereTitle": "Getting Here",
+    "dist1": "Athens Airport",
+    "dist2": "Athens Centre",
+    "dist3": "Nafplio",
+    "dist4": "Corinth Canal"
+  },
+  "gallery": {
+    "label": "The Estate",
+    "title": "Life at Epidavros",
+    "subtitle": "Towering pines, ancient olive groves, fragrant lemon trees — and the endless shimmer of the Saronic Gulf."
+  },
+  "testimonials": {
+    "label": "Guest Stories",
+    "title": "What Our Guests Say",
+    "subtitle": "Real experiences from travellers who found their perfect retreat at Epidavros Resort.",
+    "r1text": "We stayed in the Elia villa for our anniversary and it was everything we dreamed of. The olive-shaded terrace, the sound of the sea, the impeccable cleanliness — truly a place where time slows down. We will be back every year.",
+    "r2text": "Arriving here felt like entering a different world. Pine trees everywhere, the scent of lemon blossom, and the most breathtaking view of the Saronic Gulf from our terrace. The hosts are incredibly warm and attentive. An exceptional experience.",
+    "r3text": "The Voukamvilia cottage is a gem. Bougainvillea cascades over the stone walls, the private pool sparkles in the afternoon light, and every morning breakfast was a feast of local produce. Perfectly peaceful — exactly what we needed."
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "title": "Reserve Your Stay",
+    "subtitle": "Ready to experience the magic of Epidavros? Reach out and our team will personalise every detail of your stay.",
+    "addressLabel": "Address",
+    "addressValue": "Palea Epidavros, 21059\nArgolis, Greece",
+    "phoneLabel": "Phone",
+    "phoneValue": "+30 27530 41000",
+    "emailLabel": "Email",
+    "emailValue": "info@epidavrosresort.gr",
+    "hoursLabel": "Check-in / Check-out",
+    "hoursValue": "Check-in: 14:00 · Check-out: 11:00",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John & Jane Smith",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "checkIn": "Check-in Date",
+    "checkOut": "Check-out Date",
+    "roomType": "Villa Type",
+    "selectVilla": "Select a villa",
+    "numGuests": "Number of Guests",
+    "selectGuests": "Select guests",
+    "guest_one": "{{count}} Guest",
+    "guest_other": "{{count}} Guests",
+    "guestsPlus": "5+ Guests",
+    "specialRequests": "Special Requests",
+    "specialPlaceholder": "Anniversary celebration, dietary requirements, late arrival…",
+    "submit": "Send Booking Request ✉️",
+    "successTitle": "Thank you, {{name}}!",
+    "successMsg": "We have received your request and will be in touch within 24 hours.",
+    "sendAnother": "Send Another Enquiry",
+    "villaOptions": {
+      "dafni": "Dafni — Classic Double",
+      "gardenia": "Gardenia — Garden Deluxe",
+      "voukamvilia": "Voukamvilia — Sea View Suite",
+      "elia": "Elia — Family Suite",
+      "thymari": "Thymari — Poolside Bungalow",
+      "rodia": "Rodia — Panorama Penthouse"
+    }
+  },
+  "footer": {
+    "tagline": "A boutique resort on the shores of the Saronic Gulf, where Greek hospitality meets timeless beauty.",
+    "navigate": "Navigate",
+    "ourVillas": "Our Villas",
+    "contactTitle": "Contact",
+    "openYearRound": "Open year-round",
+    "copyright": "© {{year}} Epidavros Resort. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy"
+  },
+  "seo": {
+    "title": "Epidavros Villas & Suites | Akros Eco Farm — Nea Epidavros, Greece",
+    "description": "Luxury villas near the ancient Theatre of Epidaurus. Shared pool, sea views, 1 km from the beach of Nea Epidavros. Book direct for the best rates.",
+    "ogTitle": "Epidavros Villas & Suites | Akros Eco Farm",
+    "ogDescription": "Six unique eco villas with sea views, shared pool, and organic gardens in Nea Epidavros. Experience the perfect harmony of nature and luxury on the Saronic Gulf."
+  }
+}

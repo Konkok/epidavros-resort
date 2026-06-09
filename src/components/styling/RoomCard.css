@@ -1,0 +1,469 @@
+.room-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.room-card__image-wrap {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.room-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.room-card:hover .room-card__image {
+  transform: scale(1.06);
+}
+
+.room-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.room-card__category {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255,255,255,0.95);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.room-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+
+.room-card__meta {
+  display: flex;
+  gap: 16px;
+}
+
+.room-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.room-card__meta-icon {
+  font-size: 14px;
+}
+
+.room-card__name-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.room-card__name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.room-card__subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.room-card__description {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.room-card__description--expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.room-card__toggle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 0;
+  align-self: flex-start;
+  transition: color var(--transition);
+}
+
+.room-card__toggle:hover {
+  color: var(--primary-dark);
+}
+
+.room-card__amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.room-card__amenity {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-light);
+  background: var(--sand);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.room-card__amenity--more {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary-light);
+  font-weight: 600;
+}
+
+.room-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.room-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.room-card__price-amount {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.room-card__price-per {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.room-card__cta {
+  padding: 10px 22px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.room-card__cta--full {
+  width: 100%;
+  justify-content: center;
+}
+
+.room-card__tour-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 16px;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: 1.5px solid rgba(148, 202, 62, 0.35);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+}
+
+.room-card__tour-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(148, 202, 62, 0.35);
+}
+
+.room-card__tour-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── Hover carousel dots ────────────────────────────────────────── */
+.room-card__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+.room-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.room-card__dot--active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+/* ── Hover "view all" hint ──────────────────────────────────────── */
+.room-card__hover-hint {
+  position: absolute;
+  bottom: 28px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ── Villa photo modal (kept for reference, unused) ─────────────── */
+.room-card__photo-count {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background var(--transition);
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+
+.room-card__photo-count:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* ── Villa photo modal ──────────────────────────────────────────── */
+.villa-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 20px;
+}
+
+.villa-modal__close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition);
+  z-index: 10;
+}
+
+.villa-modal__close:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+.villa-modal__content {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.villa-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.villa-modal__title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.villa-modal__counter {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+.villa-modal__stage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.villa-modal__img {
+  flex: 1;
+  max-height: 56vh;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.villa-modal__nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  transition: background var(--transition);
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+.villa-modal__nav:hover {
+  background: rgba(255,255,255,0.24);
+}
+
+.villa-modal__caption {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  margin: 0;
+  min-height: 18px;
+}
+
+.villa-modal__thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.18) transparent;
+}
+
+.villa-modal__thumbs::-webkit-scrollbar { height: 4px; }
+.villa-modal__thumbs::-webkit-scrollbar-track { background: transparent; }
+.villa-modal__thumbs::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 2px; }
+
+.villa-modal__thumb {
+  flex-shrink: 0;
+  width: 74px;
+  height: 54px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.55;
+  transition: all var(--transition);
+}
+
+.villa-modal__thumb:hover { opacity: 0.9; }
+
+.villa-modal__thumb--active {
+  border-color: var(--primary);
+  opacity: 1;
+}
+
+.villa-modal__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .villa-modal {
+    padding: 60px 12px 16px;
+    align-items: flex-start;
+  }
+
+  .villa-modal__img { max-height: 44vh; }
+
+  .villa-modal__nav {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .villa-modal__thumb {
+    width: 58px;
+    height: 44px;
+  }
+}

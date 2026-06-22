@@ -207,6 +207,7 @@
     "subtitle": "A corner of Greece where ancient myth, Mediterranean nature, and crystalline sea come together in perfect harmony.",
     "body1": "Nea Epidavros sits at the heart of the Argolid peninsula, where pine-clad mountains descend to the crystalline waters of the Saronic Gulf. Within a short drive you'll find UNESCO World Heritage sites, charming fishing villages, and some of the most beautiful beaches in the Peloponnese.",
     "body2": "The estate itself sits within an ancient olive grove — a living Eco Farm producing olive oil, citrus and herbs. Culture, nature and history are not attractions you visit here; they are the air you breathe.",
+    "theatreProgrammeBtn": "View Programme",
     "statUNESCO": "UNESCO Sites Nearby",
     "statBeaches": "Beaches Within 10 km",
     "statYears": "Years of History",
@@ -214,6 +215,8 @@
     "onSite": "On-site",
     "theatreName": "Ancient Theatre of Epidaurus",
     "theatreDesc": "One of the best-preserved ancient theatres in the world — a UNESCO World Heritage Site with legendary acoustics. Home to the Athens-Epidaurus Festival every July and August.",
+    "littleTheatreName": "Little Theatre of Ancient Epidaurus",
+    "littleTheatreDesc": "A smaller but equally evocative ancient theatre nestled in the village of Palea Epidavros. Also part of the Athens-Epidaurus Festival programme, offering intimate performances in a stunning open-air setting.",
     "asklepionName": "Asklepieion Sanctuary",
     "asklepionDesc": "The most celebrated healing sanctuary of the ancient world, dedicated to Asclepius the god of medicine. Patients from across the Mediterranean came here seeking cures.",
     "beachName": "Nea Epidavros Beach",
@@ -250,8 +253,8 @@
     "label": "Guest Stories",
     "title": "What Our Guests Say",
     "subtitle": "Real experiences from travellers who found their perfect retreat at Epidavros Resort.",
-    "r1text": "We stayed in the Elia villa for our anniversary and it was everything we dreamed of. The olive-shaded terrace, the sound of the sea, the impeccable cleanliness — truly a place where time slows down. We will be back every year.",
-    "r2text": "Arriving here felt like entering a different world. Pine trees everywhere, the scent of lemon blossom, and the most breathtaking view of the Saronic Gulf from our terrace. The hosts are incredibly warm and attentive. An exceptional experience.",
+    "r1text": "The hosts were super friendly, responsive, and answered whatever questions you may have had. On my way to the house they were a great help to find it. The location is truly more beautiful than any photo could capture. The house is very clean, cute and peaceful, everything felt so comfortable and convenient when staying. Excellent stay, would recommend this place!",
+    "r2text": "A stunning place in nature, distinguished by its aesthetics and atmosphere. The hospitality was warm, friendly and truly impeccable. The ideal combination for an exceptional experience in beautiful Epidaurus.",
     "r3text": "The Voukamvilia cottage is a gem. Bougainvillea cascades over the stone walls, the private pool sparkles in the afternoon light, and every morning breakfast was a feast of local produce. Perfectly peaceful — exactly what we needed."
   },
   "contact": {

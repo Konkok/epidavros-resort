@@ -2,14 +2,14 @@ import { useTranslation } from 'react-i18next'
 import './styling/Area.css'
 
 const POIS = [
-  { icon: '🏛️', key: 'theatre',  type: 'history', dist: '7 km'    },
-  { icon: '⚕️', key: 'asklepion', type: 'history', dist: '7 km'    },
-  { icon: '🏖️', key: 'beach',    type: 'nature',  dist: '1 km'    },
-  { icon: '⛵',  key: 'palea',    type: 'nature',  dist: '8 km'    },
-  { icon: '🏰', key: 'nafplio',  type: 'town',    dist: '35 km'   },
-  { icon: '🦁', key: 'mycenae',  type: 'history', dist: '30 km'   },
-  { icon: '🌉', key: 'canal',    type: 'town',    dist: '45 km'   },
-  { icon: '🫒', key: 'farm',     type: 'nature',  dist: null      },
+  { icon: '🏛️', key: 'theatre',       type: 'history', dist: '7 km',  programmeBase: 'https://aefestival.gr/schedule/?category=&place=134&schedule_year=2026' },
+  { icon: '🎭', key: 'littleTheatre', type: 'history', dist: '8 km',  programmeBase: 'https://aefestival.gr/schedule/?category=&place=142&schedule_year=2026' },
+  { icon: '⚕️', key: 'asklepion',     type: 'history', dist: '7 km'    },
+  { icon: '🏖️', key: 'beach',         type: 'nature',  dist: '1 km'    },
+  { icon: '⛵',  key: 'palea',         type: 'nature',  dist: '8 km'    },
+  { icon: '🏰', key: 'nafplio',       type: 'town',    dist: '35 km'   },
+  { icon: '🦁', key: 'mycenae',       type: 'history', dist: '30 km'   },
+  { icon: '🫒', key: 'farm',          type: 'nature',  dist: null      },
 ]
 
 const ACTIVITIES = [
@@ -29,7 +29,9 @@ const DISTANCES = [
 ]
 
 export default function Area() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language?.split('-')[0]
+  const programmeUrl = (base) => lang === 'el' ? base : `${base}&lang=en`
 
   return (
     <section id="area" className="area section">
@@ -87,6 +89,19 @@ export default function Area() {
                     }
                   </div>
                   <p className="area__poi-desc">{t(`area.${poi.key}Desc`)}</p>
+                  {poi.programmeBase && (
+                    <a
+                      href={programmeUrl(poi.programmeBase)}
+                      className="area__poi-programme"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="13" height="13">
+                        <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      {t('area.theatreProgrammeBtn')}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

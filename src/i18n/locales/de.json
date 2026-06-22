@@ -207,6 +207,7 @@
     "subtitle": "Ein Fleckchen Griechenland, wo antiker Mythos, mediterrane Natur und kristallklares Meer in perfekter Harmonie zusammentreffen.",
     "body1": "Nea Epidavros liegt im Herzen der Argolis-Halbinsel, wo kiefernbedeckte Berge zu den kristallklaren Gewässern des Saronischen Golfs abfallen. In kurzer Fahrtzeit erreichen Sie UNESCO-Welterbestätten, malerische Fischerdörfer und einige der schönsten Strände des Peloponnes.",
     "body2": "Das Anwesen selbst liegt inmitten eines uralten Olivenhains — ein lebendiges Eco Farm, das Olivenöl, Zitrusfrüchte und Kräuter produziert. Kultur, Natur und Geschichte sind hier keine Sehenswürdigkeiten; sie sind die Luft, die Sie atmen.",
+    "theatreProgrammeBtn": "Programm ansehen",
     "statUNESCO": "UNESCO-Stätten in der Nähe",
     "statBeaches": "Strände innerhalb 10 km",
     "statYears": "Jahre Geschichte",
@@ -214,6 +215,8 @@
     "onSite": "Auf dem Gelände",
     "theatreName": "Antikes Theater von Epidaurus",
     "theatreDesc": "Eines der best erhaltenen antiken Theater der Welt — UNESCO-Welterbe mit legendärer Akustik. Schauplatz des Athener Epidaurus-Festivals jeden Juli und August.",
+    "littleTheatreName": "Kleines Theater des antiken Epidaurus",
+    "littleTheatreDesc": "Ein kleineres, aber ebenso eindrucksvolles antikes Theater im Dorf Palea Epidavros. Ebenfalls Teil des Athener Epidaurus-Festivals mit intimen Aufführungen unter freiem Himmel.",
     "asklepionName": "Asklepieion-Heiligtum",
     "asklepionDesc": "Das berühmteste Heilheiligtum der antiken Welt, dem Heilgott Asklepios geweiht. Patienten aus dem gesamten Mittelmeerraum kamen hierher auf der Suche nach Heilung.",
     "beachName": "Strand Nea Epidavros",
@@ -250,8 +253,8 @@
     "label": "Gästestimmen",
     "title": "Was unsere Gäste sagen",
     "subtitle": "Echte Erfahrungen von Reisenden, die ihr perfektes Rückzugsort im Epidavros Resort gefunden haben.",
-    "r1text": "Wir haben für unseren Jahrestag in der Villa Elia übernachtet und es war alles, wovon wir geträumt hatten. Die Terrasse unter den Olivenbäumen, das Meeresrauschen, die tadellose Sauberkeit — ein Ort, an dem die Zeit stillsteht. Wir kommen jedes Jahr wieder.",
-    "r2text": "Hier anzukommen fühlt sich an wie der Eintritt in eine andere Welt. Überall Pinien, der Duft von Zitronenblüten und der atemberaubendste Blick auf den Saronischen Golf von unserer Terrasse aus. Die Gastgeber sind unglaublich herzlich. Eine außergewöhnliche Erfahrung.",
+    "r1text": "Die Gastgeber waren super freundlich, hilfsbereit und haben jede Frage beantwortet. Auf dem Weg zum Haus haben sie mir sehr geholfen, es zu finden. Die Lage ist wirklich schöner als jedes Foto zeigen kann. Das Haus ist sehr sauber, gemütlich und ruhig — alles fühlte sich so angenehm und praktisch an. Ausgezeichneter Aufenthalt, ich empfehle diesen Ort unbedingt!",
+    "r2text": "Ein wunderschöner Ort inmitten der Natur, der durch seine Ästhetik und Atmosphäre besticht. Die Gastfreundschaft war herzlich, freundlich und wirklich tadellos. Eine ideale Kombination für ein außergewöhnliches Erlebnis im wunderschönen Epidaurus.",
     "r3text": "Das Voukamvilia-Cottage ist ein Juwel. Bougainvilleas kaskadieren über die Steinmauern, der Privatpool glitzert im Nachmittagslicht, und jedes Morgenfrühstück war ein Fest lokaler Produkte. Vollkommen friedlich — genau das, was wir brauchten."
   },
   "contact": {

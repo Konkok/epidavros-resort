@@ -80,7 +80,14 @@ export default function Contact() {
               <span className="contact__detail-icon">📍</span>
               <div>
                 <strong>{t('contact.addressLabel')}</strong>
-                <span>{CONTACT_ADDRESS}</span>
+                <a
+                  href="https://maps.app.goo.gl/hmMvPFRB5vWhwgTe9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__detail-link"
+                >
+                  {CONTACT_ADDRESS}
+                </a>
               </div>
             </div>
             <div className="contact__detail">

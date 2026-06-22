@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import SEO from './components/SEO'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import BookingSearch from './components/BookingSearch'
-import About from './components/About'
-import Rooms from './components/Rooms'
-import Amenities from './components/Amenities'
-import Area from './components/Area'
-import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import VillaPage from './components/VillaPage'
-import './App.css'
+import { useState } from "react";
+import SEO from "./components/SEO";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import BookingSearch from "./components/BookingSearch";
+import About from "./components/About";
+import Rooms from "./components/Rooms";
+import Amenities from "./components/Amenities";
+import Area from "./components/Area";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import VillaPage from "./components/VillaPage";
+import "./App.css";
 
 function App() {
-  const [selectedVilla, setSelectedVilla] = useState(null)
+  const [selectedVilla, setSelectedVilla] = useState(null);
 
   if (selectedVilla) {
     return (
@@ -23,7 +23,7 @@ function App() {
         <SEO />
         <VillaPage room={selectedVilla} onBack={() => setSelectedVilla(null)} />
       </>
-    )
+    );
   }
 
   return (
@@ -32,10 +32,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <BookingSearch />
         <About />
         <Rooms onSelectVilla={setSelectedVilla} />
         <Amenities />
+        <BookingSearch />
         <Area />
         <Gallery />
         <Testimonials />
@@ -43,7 +43,7 @@ function App() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

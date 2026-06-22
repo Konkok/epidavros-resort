@@ -15,6 +15,14 @@
   position: absolute;
   inset: 0;
   background:
+    /* Top gradient: hides hero content behind the transparent fixed navbar
+       at any viewport height — fades out well before the eyebrow at y=130px */
+    linear-gradient(
+      to bottom,
+      rgba(4, 12, 2, 0.97) 0%,
+      rgba(4, 12, 2, 0.60) 9%,
+      transparent 20%
+    ),
     linear-gradient(
       108deg,
       rgba(10, 24, 4, 0.93) 0%,
@@ -199,6 +207,14 @@
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.75);
   color: #fff;
+}
+
+
+.hero__cta--tour {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* ─── Stats glass bar ────────────────────────────────────────────────── */
@@ -413,6 +429,22 @@
 
   .hero__location {
     display: none;
+  }
+}
+
+/* Hide decorative elements on short viewports (laptop screens) */
+@media (max-height: 820px) {
+  .hero__location {
+    display: none;
+  }
+  .hero__eyebrow {
+    display: none;
+  }
+  .hero__scroll {
+    display: none;
+  }
+  .hero__title {
+    margin-top: 50px;
   }
 }
 

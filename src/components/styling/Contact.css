@@ -57,6 +57,18 @@
   line-height: 1.5;
 }
 
+.contact__detail-link {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.contact__detail-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .contact__form-wrap {
   background: var(--sand);
   border-radius: var(--radius-lg);

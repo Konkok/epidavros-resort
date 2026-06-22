@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ESTATE_TOUR_URL } from '../config'
-import TourModal from './TourModal'
 import './styling/About.css'
 
 export default function About() {
-  const [tourOpen, setTourOpen] = useState(false)
   const { t } = useTranslation()
 
   const features = [
@@ -56,25 +52,8 @@ export default function About() {
             ))}
           </div>
 
-          <button className="about__tour-btn" onClick={() => setTourOpen(true)}>
-            <svg className="about__tour-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"/>
-              <path d="M3 12c2.5-4 5.5-6 9-6s6.5 2 9 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              <path d="M3 12c2.5 4 5.5 6 9 6s6.5-2 9-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              <line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" strokeWidth="1.8"/>
-            </svg>
-            {t('about.tourBtn')}
-          </button>
         </div>
       </div>
-
-      {tourOpen && (
-        <TourModal
-          roomName={t('about.tourModalTitle')}
-          url={ESTATE_TOUR_URL}
-          onClose={() => setTourOpen(false)}
-        />
-      )}
     </section>
   )
 }

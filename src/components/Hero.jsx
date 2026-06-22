@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ESTATE_TOUR_URL } from '../config'
+import TourModal from './TourModal'
 import './styling/Hero.css'
 
 export default function Hero() {
   const { t } = useTranslation()
+  const [tourOpen, setTourOpen] = useState(false)
 
   const scrollToIframe = (e) => {
     e.preventDefault()
@@ -41,6 +45,15 @@ export default function Hero() {
             </svg>
           </a>
           <a href="#availability" className="hero__cta hero__cta--ghost" onClick={scrollToIframe}>{t('hero.bookStay')}</a>
+          <button className="hero__cta hero__cta--ghost hero__cta--tour" onClick={() => setTourOpen(true)}>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="15" height="15">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"/>
+              <path d="M3 12c2.5-4 5.5-6 9-6s6.5 2 9 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+              <path d="M3 12c2.5 4 5.5 6 9 6s6.5-2 9-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+              <line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" strokeWidth="1.8"/>
+            </svg>
+            {t('about.tourBtn')}
+          </button>
         </div>
 
         <div className="hero__stats" role="list" aria-label="Resort highlights">
@@ -67,6 +80,14 @@ export default function Hero() {
         </svg>
         <span>Nea Epidavros, Greece</span>
       </div>
+
+      {tourOpen && (
+        <TourModal
+          roomName={t('about.tourModalTitle')}
+          url={ESTATE_TOUR_URL}
+          onClose={() => setTourOpen(false)}
+        />
+      )}
 
       <a href="#about" className="hero__scroll" aria-label="Scroll down">
         <span className="hero__scroll-mouse">

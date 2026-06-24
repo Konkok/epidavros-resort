@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ESTATE_TOUR_URL } from '../config'
 import TourModal from './TourModal'
+import VideoModal from './VideoModal'
+import promoVideo from '../assets/Epidavros mp4 Promo Video.mp4'
+import homePoster from '../assets/Home.png'
 import './styling/Hero.css'
 
 export default function Hero() {
   const { t } = useTranslation()
   const [tourOpen, setTourOpen] = useState(false)
+  const [filmOpen, setFilmOpen] = useState(false)
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      videoRef.current?.pause()
+    }
+  }, [])
 
   const scrollToIframe = (e) => {
     e.preventDefault()
@@ -19,8 +30,33 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <div className="hero__bg" />
-      <div className="hero__grain" />
+
+      {/* Video background */}
+      <div className="hero__media">
+        {/* Always-visible static fallback — shown before video loads */}
+        <img
+          className="hero__poster"
+          src={homePoster}
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+        />
+        <video
+          ref={videoRef}
+          className="hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src={promoVideo} type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Gradient overlay (previously on hero__bg) */}
+      <div className="hero__overlay" aria-hidden="true" />
+      <div className="hero__grain" aria-hidden="true" />
 
       <div className="hero__content container">
         <div className="hero__eyebrow">
@@ -54,6 +90,17 @@ export default function Hero() {
             </svg>
             {t('about.tourBtn')}
           </button>
+          <button className="hero__watch-film" onClick={() => setFilmOpen(true)}>
+            <span className="hero__watch-film-ring" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true">
+                <path d="M8 5.14v14l11-7-11-7z"/>
+              </svg>
+            </span>
+            <span className="hero__watch-film-text">
+              <span className="hero__watch-film-label">{t('hero.watchFilm')}</span>
+              <span className="hero__watch-film-sub">{t('hero.watchFilmSub')}</span>
+            </span>
+          </button>
         </div>
 
         <div className="hero__stats" role="list" aria-label="Resort highlights">
@@ -86,6 +133,13 @@ export default function Hero() {
           roomName={t('about.tourModalTitle')}
           url={ESTATE_TOUR_URL}
           onClose={() => setTourOpen(false)}
+        />
+      )}
+
+      {filmOpen && (
+        <VideoModal
+          src={promoVideo}
+          onClose={() => setFilmOpen(false)}
         />
       )}
 

@@ -30,8 +30,6 @@ export default function Navbar() {
   const navLinks = [
     { label: t("nav.home"), href: "#home" },
     { label: t("nav.accommodation"), href: "#rooms" },
-    { label: t("nav.about"), href: "#about" },
-    { label: t("nav.amenities"), href: "#amenities" },
     {
       label: t("nav.availability"),
       href: "#availability",

@@ -17,6 +17,8 @@
     "subtitle": "Inmitten von hohen Pinien, uralten Olivenhainen und duftenden Zitronenbäumen — eine Einladung, die perfekte Harmonie zwischen atemberaubender Naturschönheit und dem endlosen Schimmer des Saronischen Golfs zu erleben.",
     "exploreVillas": "Villen entdecken",
     "bookStay": "Aufenthalt buchen",
+    "watchFilm": "Film ansehen",
+    "watchFilmSub": "2 Min. · Epidavros Resort",
     "stat1Value": "6",
     "stat1Label": "Einzigartige Villen",
     "stat2Value": "1 km",
@@ -76,6 +78,25 @@
     "backToVillas": "Zurück zu den Villen",
     "aboutVilla": "Über diese Villa",
     "amenitiesTitle": "Ausstattung",
+    "safetyTitle": "Sicherheit",
+    "welcomeTitle": "Willkommensausstattung",
+    "familyTitle": "Familienfreundlich",
+    "safetyItems": {
+      "smokeDetector": "Rauchmelder",
+      "fireExtinguisher": "Feuerlöscher",
+      "firstAidKit": "Erste-Hilfe-Set",
+      "securityCameras": "Überwachungskameras in gemeinsamen Außenbereichen"
+    },
+    "welcomeItems": {
+      "wine": "Kostenloses Moschofilero-Wein",
+      "water": "Mineralwasser",
+      "coffee": "Nespresso-Kaffee",
+      "tea": "Teeauswahl"
+    },
+    "familyItems": {
+      "babyCrib": "Babybett",
+      "highChair": "Hochstuhl"
+    },
     "viewsTitle": "Aussicht & Lage",
     "beachAccess": "Strandzugang (1 km)",
     "statSize": "Größe",
@@ -268,7 +289,7 @@
     "emailLabel": "E-Mail",
     "emailValue": "info@epidavrosresort.gr",
     "hoursLabel": "Check-in / Check-out",
-    "hoursValue": "Check-in: 14:00 · Check-out: 11:00",
+    "hoursValue": "Check-in: 15:00 · Check-out: 12:00",
     "fullName": "Vollständiger Name",
     "fullNamePlaceholder": "Hans & Greta Müller",
     "emailAddress": "E-Mail-Adresse",

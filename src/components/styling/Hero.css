@@ -8,15 +8,39 @@
   overflow: hidden;
 }
 
-/* Background image with split gradient:
-   deep shadow on left/bottom where content lives,
-   the sea & mountain view breathes through on the right */
-.hero__bg {
+/* ─── Video background ───────────────────────────────────────────────── */
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Static fallback — visible immediately, before video buffers */
+.hero__poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Gradient overlay — same layers as before, now on a separate div */
+.hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    /* Top gradient: hides hero content behind the transparent fixed navbar
-       at any viewport height — fades out well before the eyebrow at y=130px */
     linear-gradient(
       to bottom,
       rgba(4, 12, 2, 0.97) 0%,
@@ -35,9 +59,11 @@
       rgba(6, 16, 2, 0.80) 0%,
       rgba(6, 16, 2, 0.30) 30%,
       transparent 55%
-    ),
-    url('https://epidavrosrentalvillas.gr/wp-content/uploads/2025/02/Sea-view-Mountain-view-Akros-Eco-Estate-1.jpg')
-    center / cover no-repeat;
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__video { display: none; }
 }
 
 /* Subtle film grain texture for premium depth */
@@ -151,6 +177,7 @@
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 60px;
   opacity: 0;
   animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.75s forwards;
@@ -216,6 +243,90 @@
   align-items: center;
   gap: 8px;
 }
+
+/* ─── Watch Film ─────────────────────────────────────────────────────── */
+
+.hero__watch-film {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.hero__watch-film-ring {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+/* Pulsing ring animation */
+.hero__watch-film-ring::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: filmPulse 2.4s ease-out infinite;
+}
+
+.hero__watch-film-ring::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: filmPulse 2.4s ease-out 0.5s infinite;
+}
+
+@keyframes filmPulse {
+  0%   { opacity: 1; transform: scale(1);    }
+  80%  { opacity: 0; transform: scale(1.35); }
+  100% { opacity: 0; transform: scale(1.35); }
+}
+
+.hero__watch-film:hover .hero__watch-film-ring {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.80);
+}
+
+.hero__watch-film-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.hero__watch-film-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.25s ease;
+}
+
+.hero__watch-film-sub {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 0.25s ease;
+}
+
+.hero__watch-film:hover .hero__watch-film-label { color: #fff; }
+.hero__watch-film:hover .hero__watch-film-sub   { color: rgba(255, 255, 255, 0.65); }
 
 /* ─── Stats glass bar ────────────────────────────────────────────────── */
 
@@ -385,7 +496,9 @@
     animation: none;
     transform: scaleX(1);
   }
-  .hero__scroll-wheel {
+  .hero__scroll-wheel,
+  .hero__watch-film-ring::before,
+  .hero__watch-film-ring::after {
     animation: none;
   }
 }

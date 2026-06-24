@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AMENITY_KEY_MAP } from '../config'
+import { AMENITY_KEY_MAP, SAFETY_KEY_MAP, WELCOME_KEY_MAP, FAMILY_KEY_MAP } from '../config'
 import TourModal from './TourModal'
 import './styling/VillaPage.css'
 
@@ -14,6 +14,31 @@ const AMENITY_ICONS = {
   privatePlungePool: '🏊', panoramicViews: '🌅', gourmetKitchen: '👨‍🍳',
   butlerService: '🛎️', premiumBar: '🍸', jacuzzi: '♨️',
   fullKitchen: '🍳', washingMachine: '👕', sharedPool: '🏊', privateParking: '🚗',
+}
+
+const familyIcon = (item) => {
+  const s = item.toLowerCase()
+  if (s.includes('crib') || s.includes('baby')) return '🛏️'
+  if (s.includes('chair')) return '🪑'
+  return '👶'
+}
+
+const safetyIcon = (item) => {
+  const s = item.toLowerCase()
+  if (s.includes('smoke')) return '🔥'
+  if (s.includes('fire')) return '🧯'
+  if (s.includes('first aid')) return '🩹'
+  if (s.includes('camera')) return '📹'
+  return '🛡️'
+}
+
+const welcomeIcon = (item) => {
+  const s = item.toLowerCase()
+  if (s.includes('wine')) return '🍷'
+  if (s.includes('water')) return '💧'
+  if (s.includes('coffee') || s.includes('nespresso')) return '☕'
+  if (s.includes('tea')) return '🫖'
+  return '🎁'
 }
 
 export default function VillaPage({ room, onBack }) {
@@ -188,6 +213,60 @@ export default function VillaPage({ room, onBack }) {
                 <span className="villa-page__view-tag">🏖️ {t('rooms.beachAccess')}</span>
               </div>
             </div>
+
+            {/* Family Friendly */}
+            {room.familyFriendly?.length > 0 && (
+              <div className="villa-page__section">
+                <h3 className="villa-page__section-title">{t('rooms.familyTitle')}</h3>
+                <div className="villa-page__amenities">
+                  {room.familyFriendly.map(item => {
+                    const key = FAMILY_KEY_MAP[item]
+                    return (
+                      <div key={item} className="villa-page__amenity">
+                        <span className="villa-page__amenity-icon">{familyIcon(item)}</span>
+                        <span>{key ? t(`rooms.familyItems.${key}`, item) : item}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Safety */}
+            {room.safety?.length > 0 && (
+              <div className="villa-page__section">
+                <h3 className="villa-page__section-title">{t('rooms.safetyTitle')}</h3>
+                <div className="villa-page__amenities">
+                  {room.safety.map(item => {
+                    const key = SAFETY_KEY_MAP[item]
+                    return (
+                      <div key={item} className="villa-page__amenity">
+                        <span className="villa-page__amenity-icon">{safetyIcon(item)}</span>
+                        <span>{key ? t(`rooms.safetyItems.${key}`, item) : item}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Welcome Amenities */}
+            {room.welcomeAmenities?.length > 0 && (
+              <div className="villa-page__section">
+                <h3 className="villa-page__section-title">{t('rooms.welcomeTitle')}</h3>
+                <div className="villa-page__amenities">
+                  {room.welcomeAmenities.map(item => {
+                    const key = WELCOME_KEY_MAP[item]
+                    return (
+                      <div key={item} className="villa-page__amenity">
+                        <span className="villa-page__amenity-icon">{welcomeIcon(item)}</span>
+                        <span>{key ? t(`rooms.welcomeItems.${key}`, item) : item}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right: price + CTA card */}

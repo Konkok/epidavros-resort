@@ -17,6 +17,8 @@
     "subtitle": "Among towering pines, ancient olive groves, and fragrant lemon trees — an invitation to experience the perfect harmony between breathtaking natural beauty and the endless shimmer of the Saronic Gulf.",
     "exploreVillas": "Explore Villas",
     "bookStay": "Book Your Stay",
+    "watchFilm": "Watch Film",
+    "watchFilmSub": "2 min · Epidavros Resort",
     "stat1Value": "6",
     "stat1Label": "Unique Villas",
     "stat2Value": "1 km",
@@ -76,6 +78,25 @@
     "backToVillas": "Back to Villas",
     "aboutVilla": "About this Villa",
     "amenitiesTitle": "Amenities",
+    "safetyTitle": "Safety",
+    "welcomeTitle": "Welcome Amenities",
+    "familyTitle": "Family Friendly",
+    "safetyItems": {
+      "smokeDetector": "Smoke detector",
+      "fireExtinguisher": "Fire extinguisher",
+      "firstAidKit": "First aid kit",
+      "securityCameras": "Security cameras in common outdoor areas"
+    },
+    "welcomeItems": {
+      "wine": "Complimentary bottle of Moschofilero wine",
+      "water": "Mineral water",
+      "coffee": "Nespresso coffee",
+      "tea": "Tea selection"
+    },
+    "familyItems": {
+      "babyCrib": "Baby crib",
+      "highChair": "High chair"
+    },
     "viewsTitle": "Views & Location",
     "beachAccess": "Beach Access (1 km)",
     "statSize": "Size",
@@ -268,7 +289,7 @@
     "emailLabel": "Email",
     "emailValue": "info@epidavrosresort.gr",
     "hoursLabel": "Check-in / Check-out",
-    "hoursValue": "Check-in: 14:00 · Check-out: 11:00",
+    "hoursValue": "Check-in: 15:00 · Check-out: 12:00",
     "fullName": "Full Name",
     "fullNamePlaceholder": "John & Jane Smith",
     "emailAddress": "Email Address",

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import SEO from "./components/SEO";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -42,6 +43,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <SpeedInsights />
     </>
   );
 }

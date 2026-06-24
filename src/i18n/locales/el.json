@@ -17,6 +17,8 @@
     "subtitle": "Ανάμεσα σε ψηλά πεύκα, αιώνιους ελαιώνες και αρωματικές λεμονιές — μια πρόσκληση να βιώσετε την τέλεια αρμονία ανάμεσα στη μαγευτική φυσική ομορφιά και τη λαμπερή θάλασσα του Σαρωνικού.",
     "exploreVillas": "Εξερευνήστε τις Βίλες",
     "bookStay": "Κλείστε τη Διαμονή σας",
+    "watchFilm": "Δείτε το Βίντεο",
+    "watchFilmSub": "2 λεπτά · Epidavros Resort",
     "stat1Value": "6",
     "stat1Label": "Μοναδικές Βίλες",
     "stat2Value": "1 χλμ",
@@ -76,6 +78,25 @@
     "backToVillas": "Πίσω στις Βίλες",
     "aboutVilla": "Σχετικά με αυτή τη Βίλα",
     "amenitiesTitle": "Παροχές",
+    "safetyTitle": "Ασφάλεια",
+    "welcomeTitle": "Παροχές Καλωσορίσματος",
+    "familyTitle": "Φιλικό για Οικογένειες",
+    "safetyItems": {
+      "smokeDetector": "Ανιχνευτής καπνού",
+      "fireExtinguisher": "Πυροσβεστήρας",
+      "firstAidKit": "Κιτ πρώτων βοηθειών",
+      "securityCameras": "Κάμερες ασφαλείας σε κοινόχρηστους εξωτερικούς χώρους"
+    },
+    "welcomeItems": {
+      "wine": "Δωρεάν μπουκάλι κρασί Μοσχοφίλερο",
+      "water": "Εμφιαλωμένο νερό",
+      "coffee": "Καφές Nespresso",
+      "tea": "Επιλογή τσαγιού"
+    },
+    "familyItems": {
+      "babyCrib": "Βρεφική κούνια",
+      "highChair": "Καρέκλα φαγητού"
+    },
     "viewsTitle": "Θέα & Τοποθεσία",
     "beachAccess": "Πρόσβαση στην Παραλία (1 χλμ)",
     "statSize": "Μέγεθος",
@@ -268,7 +289,7 @@
     "emailLabel": "Email",
     "emailValue": "info@epidavrosresort.gr",
     "hoursLabel": "Άφιξη / Αναχώρηση",
-    "hoursValue": "Άφιξη: 14:00 · Αναχώρηση: 11:00",
+    "hoursValue": "Άφιξη: 15:00 · Αναχώρηση: 12:00",
     "fullName": "Ονοματεπώνυμο",
     "fullNamePlaceholder": "Γιώργος & Μαρία Παπαδόπουλος",
     "emailAddress": "Διεύθυνση Email",

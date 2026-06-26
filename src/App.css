@@ -2,7 +2,8 @@
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .section {
@@ -87,5 +88,5 @@
 @media (max-width: 640px) {
   .section { padding: 64px 0; }
   .section-sm { padding: 48px 0; }
-  .container { padding: 0 16px; }
+  .container { padding-left: 16px; padding-right: 16px; }
 }

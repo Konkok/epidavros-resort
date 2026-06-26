@@ -138,6 +138,7 @@
   border-radius: 8px;
   transition: background var(--transition);
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .navbar__burger:hover {

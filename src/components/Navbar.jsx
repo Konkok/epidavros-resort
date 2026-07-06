@@ -46,7 +46,7 @@ export default function Navbar() {
         <a href="#home" className="navbar__logo" onClick={closeMenu}>
           <img
             src={logo}
-            alt="Epidavros Villas & Suites – Akros Eco Farm"
+            alt="Epidavros Villas & Suites – Akros Eco Estate"
             className="navbar__logo-img"
           />
         </a>

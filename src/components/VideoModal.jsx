@@ -1,18 +1,20 @@
-import { useEffect, useRef } from 'react'
-import './styling/VideoModal.css'
+import { useEffect, useRef } from "react";
+import "./styling/VideoModal.css";
 
 export default function VideoModal({ src, onClose }) {
-  const videoRef = useRef(null)
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') onClose() }
-    document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
-  }, [onClose])
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
 
   return (
     <div
@@ -22,14 +24,25 @@ export default function VideoModal({ src, onClose }) {
       aria-label="Promo video"
       onClick={onClose}
     >
-      <div className="vmodal__inner" onClick={e => e.stopPropagation()}>
+      <div className="vmodal__inner" onClick={(e) => e.stopPropagation()}>
         <button
           className="vmodal__close"
           onClick={onClose}
           aria-label="Close video"
         >
-          <svg viewBox="0 0 14 14" fill="none" width="14" height="14" aria-hidden="true">
-            <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <svg
+            viewBox="0 0 14 14"
+            fill="none"
+            width="14"
+            height="14"
+            aria-hidden="true"
+          >
+            <path
+              d="M1 1l12 12M13 1L1 13"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
         </button>
 
@@ -46,8 +59,10 @@ export default function VideoModal({ src, onClose }) {
           </video>
         </div>
 
-        <p className="vmodal__label">Epidavros Villas & Suites · Akros Eco Farm</p>
+        <p className="vmodal__label">
+          Epidavros Villas & Suites · Akros Eco Estate
+        </p>
       </div>
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ const POIS = [
   { icon: '🏛️', key: 'theatre',       type: 'history', dist: '7 km',  programmeBase: 'https://aefestival.gr/schedule/?category=&place=134&schedule_year=2026' },
   { icon: '🎭', key: 'littleTheatre', type: 'history', dist: '8 km',  programmeBase: 'https://aefestival.gr/schedule/?category=&place=142&schedule_year=2026' },
   { icon: '⚕️', key: 'asklepion',     type: 'history', dist: '7 km'    },
-  { icon: '🏖️', key: 'beach',         type: 'nature',  dist: '1 km'    },
+  { icon: '🏖️', key: 'beach',         type: 'nature',  dist: '0.4 km'  },
   { icon: '⛵',  key: 'palea',         type: 'nature',  dist: '8 km'    },
   { icon: '🏰', key: 'nafplio',       type: 'town',    dist: '35 km'   },
   { icon: '🦁', key: 'mycenae',       type: 'history', dist: '30 km'   },

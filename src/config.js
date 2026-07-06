@@ -1,5 +1,5 @@
 // ── Site Identity ────────────────────────────────────────────────────────────
-export const SITE_NAME = "Epidavros Villas & Suites | Akros Eco Farm";
+export const SITE_NAME = "Epidavros Villas & Suites | Akros Eco Estate";
 export const SITE_URL = "https://www.epidavrosvillas.gr";
 export const THEME_COLOR = "#94ca3e";
 
@@ -60,19 +60,19 @@ export const SAFETY_KEY_MAP = {
   "Fire extinguisher": "fireExtinguisher",
   "First aid kit": "firstAidKit",
   "Security cameras in common outdoor areas": "securityCameras",
-}
+};
 
 export const WELCOME_KEY_MAP = {
   "Complimentary bottle of Moschofilero wine": "wine",
   "Mineral water": "water",
   "Nespresso coffee": "coffee",
   "Tea selection": "tea",
-}
+};
 
 export const FAMILY_KEY_MAP = {
   "Baby crib": "babyCrib",
   "High chair": "highChair",
-}
+};
 
 export const AMENITY_KEY_MAP = {
   "Private Balcony": "privateBalcony",
@@ -185,10 +185,7 @@ export const rooms = [
       "Private Parking",
       "Garden View",
     ],
-    familyFriendly: [
-      "Baby crib",
-      "High chair",
-    ],
+    familyFriendly: ["Baby crib", "High chair"],
     safety: [
       "Smoke detector",
       "Fire extinguisher",
@@ -326,10 +323,7 @@ export const rooms = [
       "Private Parking",
       "Washing Machine",
     ],
-    familyFriendly: [
-      "Baby crib",
-      "High chair",
-    ],
+    familyFriendly: ["Baby crib", "High chair"],
     safety: [
       "Smoke detector",
       "Fire extinguisher",
@@ -510,10 +504,7 @@ export const rooms = [
       "Private Parking",
       "Washing Machine",
     ],
-    familyFriendly: [
-      "Baby crib",
-      "High chair",
-    ],
+    familyFriendly: ["Baby crib", "High chair"],
     safety: [
       "Smoke detector",
       "Fire extinguisher",
@@ -601,10 +592,7 @@ export const rooms = [
       "Private Parking",
       "Washing Machine",
     ],
-    familyFriendly: [
-      "Baby crib",
-      "High chair",
-    ],
+    familyFriendly: ["Baby crib", "High chair"],
     safety: [
       "Smoke detector",
       "Fire extinguisher",

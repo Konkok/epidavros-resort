@@ -4,7 +4,7 @@ import { rooms } from '../config'
 import RoomCard from './RoomCard'
 import './styling/Rooms.css'
 
-const CATEGORY_VALUES = ['All', 'Villa', 'Deluxe']
+const CATEGORY_VALUES = ['All', 'Villa', 'Suite']
 
 export default function Rooms({ onSelectVilla }) {
   const { t } = useTranslation()
@@ -14,8 +14,11 @@ export default function Rooms({ onSelectVilla }) {
     ? rooms
     : rooms.filter(r => r.category === activeCategory)
 
-  const categoryLabel = cat =>
-    cat === 'All' ? t('rooms.filterAll') : t(`rooms.category.${cat.toLowerCase()}`, cat)
+  const categoryLabel = cat => {
+    if (cat === 'All') return t('rooms.filterAll')
+    if (cat === 'Suite') return t('rooms.filterSuite', 'Suites')
+    return t(`rooms.category.${cat.toLowerCase()}`, cat)
+  }
 
   return (
     <section id="rooms" className="rooms section">

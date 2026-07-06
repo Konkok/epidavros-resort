@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import './styling/Amenities.css'
 
-const AMENITY_KEYS = ['pool', 'restaurant', 'spa', 'boat', 'theatre', 'bike', 'cooking', 'wifi']
+const AMENITY_KEYS = ['parking', 'wifi', 'seaView', 'mountainView', 'proximity', 'residential']
 const AMENITY_ICONS = {
-  pool: '🏊', restaurant: '🍽️', spa: '💆', boat: '🚤',
-  theatre: '🎭', bike: '🚲', cooking: '🍳', wifi: '📶',
+  parking: '🅿️', wifi: '📶', seaView: '🌊', mountainView: '🏔️',
+  proximity: '🏖️', residential: '🌿',
 }
 
 export default function Amenities() {

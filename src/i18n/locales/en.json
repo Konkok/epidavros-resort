@@ -21,7 +21,7 @@
     "watchFilmSub": "2 min · Epidavros Resort",
     "stat1Value": "6",
     "stat1Label": "Unique Villas",
-    "stat2Value": "1 km",
+    "stat2Value": "0.4 km",
     "stat2Label": "From the Beach",
     "stat3Value": "4.9",
     "stat3Label": "Guest Rating"
@@ -73,6 +73,7 @@
     "title": "Find Your Perfect Villa",
     "subtitle": "From cosy retreats to panoramic suites, each villa has been crafted to bring you closer to the magic of Epidavros.",
     "filterAll": "All",
+    "filterSuite": "Suites",
     "viewPhotos": "photos",
     "viewAll": "View all {{count}} photos",
     "backToVillas": "Back to Villas",
@@ -98,7 +99,7 @@
       "highChair": "High chair"
     },
     "viewsTitle": "Views & Location",
-    "beachAccess": "Beach Access (1 km)",
+    "beachAccess": "Beach Access (0.4 km)",
     "statSize": "Size",
     "statGuests": "Max Guests",
     "checkAvailability": "Check Availability",
@@ -189,37 +190,29 @@
     "label": "What We Offer",
     "title": "Resort Amenities",
     "subtitle": "Everything you need for an unforgettable Greek holiday is right here.",
-    "pool": {
-      "title": "Infinity Pool",
-      "desc": "Swim to the edge and gaze at the endless Saronic Gulf below."
-    },
-    "restaurant": {
-      "title": "Seaside Restaurant",
-      "desc": "Fresh-caught seafood, local produce, and traditional Greek recipes."
-    },
-    "spa": {
-      "title": "Wellness & Spa",
-      "desc": "Massage, aromatherapy, and yoga classes with sea-view terraces."
-    },
-    "boat": {
-      "title": "Boat Excursions",
-      "desc": "Daily trips to hidden coves, sea caves, and nearby islands."
-    },
-    "theatre": {
-      "title": "Theatre Visits",
-      "desc": "Guided tours to the ancient Epidaurus Theatre — 5 km away."
-    },
-    "bike": {
-      "title": "Bicycle Rentals",
-      "desc": "Explore the olive groves and coastal paths at your own pace."
-    },
-    "cooking": {
-      "title": "Greek Cooking Classes",
-      "desc": "Learn the secrets of traditional Mediterranean cuisine."
+    "parking": {
+      "title": "Free Parking",
+      "desc": "Complimentary private parking available for all guests throughout your stay."
     },
     "wifi": {
       "title": "High-Speed Wi-Fi",
-      "desc": "Fast and reliable connection throughout the entire resort."
+      "desc": "Fast and reliable connection throughout the entire estate."
+    },
+    "seaView": {
+      "title": "Sea View",
+      "desc": "Breathtaking views of the Saronic Gulf from the estate and most villas."
+    },
+    "mountainView": {
+      "title": "Mountain View",
+      "desc": "Surrounded by the lush green mountains of the Argolid peninsula."
+    },
+    "proximity": {
+      "title": "Proximity to the Sea",
+      "desc": "Just 0.4 km from the crystal-clear shores of Nea Epidavros beach."
+    },
+    "residential": {
+      "title": "Out of Residential Area",
+      "desc": "Set in a peaceful olive grove away from the town, offering true privacy and tranquility."
     }
   },
   "area": {
@@ -250,7 +243,7 @@
     "mycenaeDesc": "The legendary citadel of Agamemnon, birthplace of Mycenaean civilisation. The Lion Gate and Treasury of Atreus are among Europe's most iconic prehistoric monuments.",
     "canalName": "Corinth Canal",
     "canalDesc": "A marvel of 19th-century engineering that slices through the Isthmus of Corinth, connecting the Saronic and Corinthian gulfs. A spectacular sight from the bridge above.",
-    "farmName": "Akros Eco Farm",
+    "farmName": "Akros Eco Estate",
     "farmDesc": "Ancient olive groves, fragrant lemon trees, and organic gardens surround the estate — a living farm producing olive oil, citrus and herbs you can taste and take home.",
     "activitiesTitle": "Experiences",
     "act1": "Swimming & Snorkelling",
@@ -330,9 +323,9 @@
     "cookies": "Cookie Policy"
   },
   "seo": {
-    "title": "Epidavros Villas & Suites | Akros Eco Farm — Nea Epidavros, Greece",
-    "description": "Luxury villas near the ancient Theatre of Epidaurus. Shared pool, sea views, 1 km from the beach of Nea Epidavros. Book direct for the best rates.",
-    "ogTitle": "Epidavros Villas & Suites | Akros Eco Farm",
+    "title": "Epidavros Villas & Suites | Akros Eco Estate — Nea Epidavros, Greece",
+    "description": "Luxury villas near the ancient Theatre of Epidaurus. Shared pool, sea views, 0.4 km from the beach of Nea Epidavros. Book direct for the best rates.",
+    "ogTitle": "Epidavros Villas & Suites | Akros Eco Estate",
     "ogDescription": "Six unique eco villas with sea views, shared pool, and organic gardens in Nea Epidavros. Experience the perfect harmony of nature and luxury on the Saronic Gulf."
   }
 }

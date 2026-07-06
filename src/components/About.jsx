@@ -43,15 +43,6 @@ export default function About() {
           <p className="about__body">{t('about.body1')}</p>
           <p className="about__body">{t('about.body2')}</p>
 
-          <div className="about__features">
-            {features.map(f => (
-              <div key={f.key} className="about__feature">
-                <span className="about__feature-icon">{f.icon}</span>
-                <span className="about__feature-label">{t(`about.${f.key}`)}</span>
-              </div>
-            ))}
-          </div>
-
         </div>
       </div>
     </section>

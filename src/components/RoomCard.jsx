@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { AMENITY_KEY_MAP } from '../config'
 import './styling/RoomCard.css'
@@ -15,7 +16,7 @@ const AMENITY_ICONS = {
   fullKitchen: '🍳', washingMachine: '👕', sharedPool: '🏊', privateParking: '🚗',
 }
 
-export default function RoomCard({ room, onSelect }) {
+export default function RoomCard({ room }) {
   const { t } = useTranslation()
   const [expanded, setExpanded] = useState(false)
   const [hoverIdx, setHoverIdx] = useState(0)
@@ -45,12 +46,11 @@ export default function RoomCard({ room, onSelect }) {
   return (
     <article className="room-card">
       {/* Image — click opens VillaPage, hover cycles photos */}
-      <div
+      <Link
+        to={`/${room.villaKey}`}
         className="room-card__image-wrap"
-        onClick={onSelect}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ cursor: 'pointer' }}
       >
         <img
           src={currentSrc}
@@ -81,7 +81,7 @@ export default function RoomCard({ room, onSelect }) {
             {t('rooms.viewAll', { count: photos.length })}
           </div>
         )}
-      </div>
+      </Link>
 
       <div className="room-card__body">
         <div className="room-card__meta">
@@ -108,9 +108,9 @@ export default function RoomCard({ room, onSelect }) {
         </div>
 
         <div className="room-card__name-wrap">
-          <h3 className="room-card__name" onClick={onSelect} style={{ cursor: 'pointer' }}>
+          <Link to={`/${room.villaKey}`} className="room-card__name">
             {room.name}
-          </h3>
+          </Link>
           <span className="room-card__subtitle">
             {t(`rooms.villas.${room.villaKey}.subtitle`, '')}
           </span>
@@ -141,9 +141,9 @@ export default function RoomCard({ room, onSelect }) {
         </div>
 
         <div className="room-card__footer">
-          <button className="btn btn-primary room-card__cta room-card__cta--full" onClick={onSelect}>
+          <Link to={`/${room.villaKey}`} className="btn btn-primary room-card__cta room-card__cta--full">
             {t('rooms.explore')}
-          </button>
+          </Link>
         </div>
       </div>
     </article>

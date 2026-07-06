@@ -19,6 +19,8 @@
   position: relative;
   aspect-ratio: 16/10;
   overflow: hidden;
+  display: block;
+  cursor: pointer;
 }
 
 .room-card__image {
@@ -99,6 +101,11 @@
   color: var(--text);
   line-height: 1.2;
   margin: 0;
+  text-decoration: none;
+  display: block;
+}
+.room-card__name:hover {
+  color: var(--text);
 }
 
 .room-card__subtitle {

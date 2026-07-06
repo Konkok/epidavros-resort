@@ -6,7 +6,7 @@ import './styling/Rooms.css'
 
 const CATEGORY_VALUES = ['All', 'Villa', 'Suite']
 
-export default function Rooms({ onSelectVilla }) {
+export default function Rooms() {
   const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState('All')
 
@@ -45,7 +45,7 @@ export default function Rooms({ onSelectVilla }) {
 
         <div className="rooms__grid">
           {filtered.map(room => (
-            <RoomCard key={room.id} room={room} onSelect={() => onSelectVilla(room)} />
+            <RoomCard key={room.id} room={room} />
           ))}
         </div>
       </div>

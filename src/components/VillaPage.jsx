@@ -49,14 +49,7 @@ export default function VillaPage({ room, onBack }) {
 
   const goToBooking = (e) => {
     e.preventDefault()
-    onBack()
-    setTimeout(() => {
-      const target =
-        document.querySelector('.booking-search__iframe-wrap') ||
-        document.querySelector('.booking-search__iframe') ||
-        document.getElementById('availability')
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 80)
+    onBack('availability')
   }
 
   const photos = room.photos || [{ src: room.image, alt: room.name }]
@@ -92,7 +85,7 @@ export default function VillaPage({ room, onBack }) {
     <div className="villa-page">
       {/* Sticky top bar */}
       <div className="villa-page__topbar">
-        <button className="villa-page__back" onClick={onBack}>
+        <button className="villa-page__back" onClick={() => onBack()}>
           ← {t('rooms.backToVillas')}
         </button>
         <a href="#availability" className="btn btn-primary villa-page__book-btn" onClick={goToBooking}>
@@ -286,7 +279,7 @@ export default function VillaPage({ room, onBack }) {
                   {t('rooms.explore360')}
                 </button>
               )}
-              <a href="#contact" className="btn btn-outline villa-page__cta-secondary" onClick={onBack}>
+              <a href="#contact" className="btn btn-outline villa-page__cta-secondary" onClick={(e) => { e.preventDefault(); onBack('contact') }}>
                 {t('rooms.enquire')}
               </a>
               <ul className="villa-page__perks">

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/guesty/(.*)",
+      "destination": "https://app.guesty.com/api/pm-websites-backend/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

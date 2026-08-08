@@ -177,12 +177,12 @@
         "description": "Der Olivenbaum — Elia — beherbergt griechische Familien seit Jahrtausenden. Diese Zweizimmer-Suite tut dasselbe: Schlafzimmer, Kinderzimmer mit Etagenbett, großzügiger Wohnbereich und Meerblick-Terrasse."
       },
       "thymari": {
-        "subtitle": "Pool-Bungalow",
-        "description": "Wilder Thymian wächst am Hang über diesem Bungalow und erfüllt die Luft an warmen Abenden mit seinem Duft. Treten Sie von Ihrer privaten Steinterrasse direkt in den Pool. Kingsize-Bett, Steinmauern, Außendusche."
+        "subtitle": "Panorama-Bungalow",
+        "description": "Wilder Thymian wächst am Hang über diesem Bungalow und erfüllt die Luft an warmen Abenden mit seinem Duft. Treten Sie von Ihrer privaten Steinterrasse direkt in den Garten. Kingsize-Bett, Steinmauern, Außendusche."
       },
       "rodia": {
         "subtitle": "Panorama-Penthouse",
-        "description": "Der Granatapfel — Rodia — ist ein griechisches Symbol für Fülle und Freude. Im Kronjuwel des Anwesens erwartet Sie beides: 360°-Meerblick, privater Tauchpool auf der Terrasse, Gourmetküche und einzigartiges Design."
+        "description": "Der Granatapfel — Rodia — ist ein griechisches Symbol für Fülle und Freude. Im Kronjuwel des Anwesens erwartet Sie beides: 360°-Meerblick, Gourmetküche und einzigartiges Design."
       }
     }
   },
@@ -307,7 +307,7 @@
       "gardenia": "Gardenia — Garden Deluxe",
       "voukamvilia": "Voukamvilia — Meerblick-Suite",
       "elia": "Elia — Familiensuite",
-      "thymari": "Thymari — Pool-Bungalow",
+      "thymari": "Thymari — Panorama-Bungalow",
       "rodia": "Rodia — Panorama-Penthouse"
     }
   },

@@ -177,12 +177,12 @@
         "description": "Elia — the olive tree — has sheltered Greek families for millennia. This two-room suite does the same, with a master bedroom, a children's bunk room, a spacious living area, and a generous sea-view terrace where everyone can gather under the Greek sun."
       },
       "thymari": {
-        "subtitle": "Poolside Bungalow",
-        "description": "Wild thyme grows across the hillside above this ground-floor bungalow, filling the air with its scent on warm evenings. Step from your private stone patio straight into the sparkling pool. A king bed, exposed stone walls, and an outdoor shower complete the experience."
+        "subtitle": "Sea View Bungalow",
+        "description": "Wild thyme grows across the hillside above this ground-floor bungalow, filling the air with its scent on warm evenings. Step from your private stone patio straight into the garden. A king bed, exposed stone walls, and an outdoor shower complete the experience."
       },
       "rodia": {
         "subtitle": "Panorama Penthouse",
-        "description": "The pomegranate — rodia — is a Greek symbol of abundance and joy. At the crown of the estate, this penthouse delivers both: 360° sea views, a private plunge pool on the terrace, a gourmet kitchen stocked with local produce, and bespoke design throughout."
+        "description": "The pomegranate — rodia — is a Greek symbol of abundance and joy. At the crown of the estate, this penthouse delivers both: 360° sea views, a gourmet kitchen stocked with local produce, and bespoke design throughout."
       }
     }
   },
@@ -307,7 +307,7 @@
       "gardenia": "Gardenia — Garden Deluxe",
       "voukamvilia": "Voukamvilia — Sea View Suite",
       "elia": "Elia — Family Suite",
-      "thymari": "Thymari — Poolside Bungalow",
+      "thymari": "Thymari — Sea View Bungalow",
       "rodia": "Rodia — Panorama Penthouse"
     }
   },

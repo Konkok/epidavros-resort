@@ -37,7 +37,7 @@ function StarRating({ rating }) {
   )
 }
 
-function ListingCard({ listing, nights }) {
+function ListingCard({ listing }) {
   const { t } = useTranslation()
 
   const photo =
@@ -253,7 +253,7 @@ function BookingAPISearch() {
               </p>
               <div className="booking-search__grid">
                 {results.map(listing => (
-                  <ListingCard key={listing._id} listing={listing} nights={nights} />
+                  <ListingCard key={listing._id} listing={listing} />
                 ))}
               </div>
             </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./styling/VideoModal.css";
 
-export default function VideoModal({ src, onClose }) {
+export default function VideoModal({ src, poster, onClose }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -54,6 +54,7 @@ export default function VideoModal({ src, onClose }) {
             autoPlay
             playsInline
             preload="metadata"
+            poster={poster}
           >
             <source src={src} type="video/mp4" />
           </video>

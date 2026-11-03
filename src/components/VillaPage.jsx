@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AMENITY_KEY_MAP, SAFETY_KEY_MAP, WELCOME_KEY_MAP, FAMILY_KEY_MAP } from '../config'
 import TourModal from './TourModal'
+import Img from './Img'
 import './styling/VillaPage.css'
 
 const AMENITY_ICONS = {
@@ -99,7 +100,7 @@ export default function VillaPage({ room, onBack }) {
         <div className="villa-page__gallery">
           {/* Main photo */}
           <div className="villa-page__main-photo" onClick={() => setLightboxOpen(true)}>
-            <img src={photos[activeIdx].src} alt={photos[activeIdx].alt} />
+            <Img src={photos[activeIdx].src} alt={photos[activeIdx].alt} sizes="(max-width: 1200px) 100vw, 1152px" priority />
             <div className="villa-page__main-overlay">
               <span className="villa-page__view-all">
                 📷 {t('rooms.viewAll', { count: photos.length })}
@@ -116,7 +117,7 @@ export default function VillaPage({ room, onBack }) {
                 onClick={() => setActiveIdx(i)}
                 aria-label={`View photo ${i + 1}`}
               >
-                <img src={p.src} alt={p.alt} loading="lazy" />
+                <Img src={p.src} alt={p.alt} sizes="160px" />
               </button>
             ))}
           </div>
@@ -298,7 +299,7 @@ export default function VillaPage({ room, onBack }) {
           <button className="villa-page__lb-close" onClick={() => setLightboxOpen(false)}>✕</button>
           <button className="villa-page__lb-nav villa-page__lb-nav--prev" onClick={e => { e.stopPropagation(); go(-1) }}>‹</button>
           <div className="villa-page__lb-img-wrap" onClick={e => e.stopPropagation()}>
-            <img src={photos[activeIdx].src} alt={photos[activeIdx].alt} />
+            <Img src={photos[activeIdx].src} alt={photos[activeIdx].alt} loading="eager" />
             <p className="villa-page__lb-caption">{photos[activeIdx].alt} · {activeIdx + 1} / {photos.length}</p>
           </div>
           <button className="villa-page__lb-nav villa-page__lb-nav--next" onClick={e => { e.stopPropagation(); go(1) }}>›</button>

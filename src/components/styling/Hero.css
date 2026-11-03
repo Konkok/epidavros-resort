@@ -16,7 +16,13 @@
   overflow: hidden;
 }
 
-/* Static fallback — visible immediately, before video buffers */
+/* The <picture> is only a source wrapper — the <img> inside is what's painted */
+.hero__media picture {
+  display: block;
+}
+
+/* Static fallback — visible immediately, before video buffers.
+   This is the LCP element, preloaded from index.html. */
 .hero__poster {
   position: absolute;
   inset: 0;
@@ -34,6 +40,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  /* Video mounts after load; fade it over the poster instead of popping */
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.hero__video.is-ready {
+  opacity: 1;
 }
 
 /* Gradient overlay — same layers as before, now on a separate div */

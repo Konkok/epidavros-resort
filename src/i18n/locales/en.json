@@ -8,7 +8,8 @@
     "gallery": "Gallery",
     "contact": "Contact",
     "bookNow": "Book Now",
-    "accommodation": "Accommodation"
+    "accommodation": "Accommodation",
+    "blog": "Blog"
   },
   "hero": {
     "label": "Welcome to Epidavros",
@@ -327,5 +328,25 @@
     "description": "Luxury villas near the ancient Theatre of Epidaurus. Shared pool, sea views, 0.4 km from the beach of Nea Epidavros. Book direct for the best rates.",
     "ogTitle": "Epidavros Villas & Suites | Akros Eco Estate",
     "ogDescription": "Six unique eco villas with sea views, shared pool, and organic gardens in Nea Epidavros. Experience the perfect harmony of nature and luxury on the Saronic Gulf."
+  },
+  "blog": {
+    "title": "Journal",
+    "subtitle": "Stories, guides and local tips from Nea Epidavros and the Argolida.",
+    "back": "Back to home",
+    "backToBlog": "Back to journal",
+    "readMore": "Read article",
+    "empty": "New articles are coming soon.",
+    "loading": "Loading…",
+    "error": "The journal could not be loaded. Please try again later.",
+    "notFound": "Article not found",
+    "notFoundText": "This article may have been moved or removed.",
+    "newer": "Newer article",
+    "older": "Older article"
+  },
+  "cookies": {
+    "title": "Cookie preferences",
+    "text": "We use cookies from Meta and Google to measure our ads and show you relevant offers. You can change your choice any time via \"Cookie Policy\" at the bottom of the page.",
+    "accept": "Accept",
+    "reject": "Reject"
   }
 }

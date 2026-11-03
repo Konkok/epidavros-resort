@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import Img from './Img'
 import './styling/Area.css'
 
 const POIS = [
@@ -47,10 +48,10 @@ export default function Area() {
         {/* Intro */}
         <div className="area__intro">
           <div className="area__intro-image">
-            <img
-              src="https://epidavrosrentalvillas.gr/wp-content/uploads/2025/02/General-view-to-the-sea-and-the-mountain-from-Akros-Eco-Estate-4.jpg"
+            <Img
+              sizes="(max-width: 900px) 100vw, 50vw"
+              src="images/general/General-view-to-the-sea-and-the-mountain-from-Akros-Eco-Estate-4.jpg"
               alt="Sea and mountain view — Epidavros area"
-              loading="lazy"
             />
           </div>
           <div className="area__intro-text">

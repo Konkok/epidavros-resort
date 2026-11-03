@@ -5,50 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fallback SEO — overridden dynamically by react-helmet-async -->
-    <title>
-      Epidavros Villas &amp; Suites | Akros Eco Estate — Nea Epidavros, Greece
-    </title>
-    <meta
-      name="description"
-      content="Luxury eco villas near the ancient Theatre of Epidaurus. Shared pool, sea views, 0.4 km from the beach. Book direct for the best rates."
-    />
-    <meta name="theme-color" content="#94ca3e" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph fallback -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Epidavros Villas &amp; Suites | Akros Eco Estate"
-    />
-    <meta
-      property="og:description"
-      content="Six unique eco villas with sea views and shared pool in Nea Epidavros, Greece."
-    />
-    <meta
-      property="og:image"
-      content="https://epidavrosrentalvillas.gr/wp-content/uploads/2025/02/Sea-view-Mountain-view-Akros-Eco-Estate-1.jpg"
-    />
-
-    <!-- Canonical & hreflang fallbacks -->
-    <link rel="canonical" href="https://www.epidavrosvillas.gr" />
-    <link rel="alternate" hreflang="en" href="https://www.epidavrosvillas.gr" />
-    <link rel="alternate" hreflang="el" href="https://www.epidavrosvillas.gr" />
-    <link rel="alternate" hreflang="de" href="https://www.epidavrosvillas.gr" />
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://www.epidavrosvillas.gr"
-    />
+    <!-- Title, meta, canonical and JSON-LD come from src/components/SEO.jsx.
+         scripts/prerender.js writes them here per route at build time so
+         crawlers that don't run JS still see them. -->
+    <!--app-head-->
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://epidavrosrentalvillas.gr" />
+    <!-- Photos, videos and the blog are served from the media site. -->
+    <link rel="preconnect" href="%VITE_ASSET_BASE_URL%" />
+
+    <!--
+      LCP preload — the hero poster is the largest contentful element.
+      These must stay in sync with the <picture> in src/components/Hero.jsx,
+      otherwise the browser downloads the image twice.
+      Served from /public so the preload scanner can start the fetch before
+      the JS bundle has parsed, rather than after React renders the <img>.
+    -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="/hero-poster.avif"
+      imagesrcset="
+        /hero-poster-800.avif   800w,
+        /hero-poster-1200.avif 1200w,
+        /hero-poster.avif      1672w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <!-- AVIF only: a second WebP preload would be fetched too by every browser
+         that supports both, doubling the LCP download. Browsers without AVIF
+         still get WebP from the <picture>, just without the preload. -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
+    <!--app-data-->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

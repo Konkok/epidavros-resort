@@ -37,6 +37,7 @@ export default function Navbar() {
     },
     { label: t("nav.area"), href: "#area" },
     { label: t("nav.gallery"), href: "#gallery" },
+    { label: t("nav.blog"), href: "/blog" },
     { label: t("nav.contact"), href: "#contact" },
   ];
 

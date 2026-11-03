@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { AMENITY_KEY_MAP } from '../config'
+import Img from './Img'
 import './styling/RoomCard.css'
 
 const AMENITY_ICONS = {
@@ -52,11 +53,11 @@ export default function RoomCard({ room }) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <img
+        <Img
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
           src={currentSrc}
           alt={hovered ? photos[hoverIdx].alt : room.name}
           className="room-card__image"
-          loading="lazy"
         />
         {room.badge && <span className="room-card__badge">{room.badge}</span>}
         <span className="room-card__category">

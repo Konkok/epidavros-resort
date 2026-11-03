@@ -8,7 +8,8 @@
     "gallery": "Galerie",
     "contact": "Kontakt",
     "bookNow": "Jetzt buchen",
-    "accommodation": "Unterkunft"
+    "accommodation": "Unterkunft",
+    "blog": "Blog"
   },
   "hero": {
     "label": "Willkommen in Epidavros",
@@ -327,5 +328,25 @@
     "description": "Luxusvillen nahe dem antiken Theater von Epidaurus. Gemeinschaftspool, Meerblick, 0,4 km vom Strand in Nea Epidavros. Direkt buchen für die besten Preise.",
     "ogTitle": "Epidavros Villen & Suiten | Akros Eco Estate",
     "ogDescription": "Sechs einzigartige Öko-Villen mit Meerblick, Gemeinschaftspool und biologischen Gärten in Nea Epidavros. Erleben Sie die perfekte Harmonie von Natur und Luxus."
+  },
+  "blog": {
+    "title": "Journal",
+    "subtitle": "Geschichten, Reiseführer und lokale Tipps aus Nea Epidavros und der Argolis.",
+    "back": "Zurück zur Startseite",
+    "backToBlog": "Zurück zum Journal",
+    "readMore": "Artikel lesen",
+    "empty": "Neue Artikel folgen in Kürze.",
+    "loading": "Wird geladen…",
+    "error": "Das Journal konnte nicht geladen werden. Bitte versuchen Sie es später erneut.",
+    "notFound": "Artikel nicht gefunden",
+    "notFoundText": "Dieser Artikel wurde möglicherweise verschoben oder entfernt.",
+    "newer": "Neuerer Artikel",
+    "older": "Älterer Artikel"
+  },
+  "cookies": {
+    "title": "Cookie-Einstellungen",
+    "text": "Wir verwenden Cookies von Meta und Google, um unsere Werbung zu messen und Ihnen passende Angebote zu zeigen. Sie können Ihre Auswahl jederzeit über „Cookie-Richtlinie“ unten auf der Seite ändern.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen"
   }
 }

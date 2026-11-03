@@ -3,19 +3,51 @@ import { useTranslation } from 'react-i18next'
 import { ESTATE_TOUR_URL } from '../config'
 import TourModal from './TourModal'
 import VideoModal from './VideoModal'
-import promoVideo from '../assets/Epidavros mp4 Promo Video.mp4'
-import homePoster from '../assets/Home.png'
+import { mediaUrl, VIDEOS } from '../media'
 import './styling/Hero.css'
+
+// Widths generated into /public alongside the preload hints in index.html.
+const POSTER_SRCSET = (ext) =>
+  `/hero-poster-800.${ext} 800w, /hero-poster-1200.${ext} 1200w, /hero-poster.${ext} 1672w`
 
 export default function Hero() {
   const { t } = useTranslation()
   const [tourOpen, setTourOpen] = useState(false)
   const [filmOpen, setFilmOpen] = useState(false)
+  // The background video is only attached after load — see below.
+  const [videoSrc, setVideoSrc] = useState(null)
   const videoRef = useRef(null)
 
+  /*
+   * The promo video is far larger than the poster. With autoPlay and no
+   * preload hint the browser starts buffering it immediately and it competes
+   * with the poster for bandwidth, which pushed desktop LCP past 4s (mobile
+   * was unaffected because mobile browsers throttle autoplay buffering).
+   * So: don't give the element a src until the page has finished loading,
+   * and skip the video entirely when the user can't or doesn't want it.
+   */
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      videoRef.current?.pause()
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const conn = navigator.connection
+    if (conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType || '')) return
+
+    let cancelled = false
+    const attach = () => {
+      const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 200))
+      idle(() => {
+        // Phones get the 720p encode: same look on a small screen at half the bytes.
+        const small = window.matchMedia('(max-width: 900px)').matches
+        if (!cancelled) setVideoSrc(mediaUrl(small ? VIDEOS.heroLoopSmall : VIDEOS.heroLoop))
+      })
+    }
+
+    if (document.readyState === 'complete') attach()
+    else window.addEventListener('load', attach, { once: true })
+
+    return () => {
+      cancelled = true
+      window.removeEventListener('load', attach)
     }
   }, [])
 
@@ -33,25 +65,38 @@ export default function Hero() {
 
       {/* Video background */}
       <div className="hero__media">
-        {/* Always-visible static fallback — shown before video loads */}
-        <img
-          className="hero__poster"
-          src={homePoster}
-          alt=""
-          aria-hidden="true"
-          fetchpriority="high"
-        />
-        <video
-          ref={videoRef}
-          className="hero__video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          aria-hidden="true"
-        >
-          <source src={promoVideo} type="video/mp4" />
-        </video>
+        {/* Always-visible static fallback — this is the LCP element.
+            Preloaded in index.html; keep the sources in sync with it. */}
+        <picture>
+          <source type="image/avif" srcSet={POSTER_SRCSET('avif')} sizes="100vw" />
+          <source type="image/webp" srcSet={POSTER_SRCSET('webp')} sizes="100vw" />
+          <img
+            className="hero__poster"
+            src="/hero-poster.jpg"
+            srcSet={POSTER_SRCSET('jpg')}
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt=""
+            aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
+        {videoSrc && (
+          <video
+            ref={videoRef}
+            className="hero__video"
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            onCanPlay={(e) => e.currentTarget.classList.add('is-ready')}
+          />
+        )}
       </div>
 
       {/* Gradient overlay (previously on hero__bg) */}
@@ -138,7 +183,8 @@ export default function Hero() {
 
       {filmOpen && (
         <VideoModal
-          src={promoVideo}
+          src={mediaUrl(VIDEOS.promo)}
+          poster="/hero-poster-1200.jpg"
           onClose={() => setFilmOpen(false)}
         />
       )}

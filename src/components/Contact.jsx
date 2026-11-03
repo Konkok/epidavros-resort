@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BOOKING_RECIPIENT, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS } from '../config'
+import { trackLead } from '../tracking'
 import './styling/Contact.css'
 
 export default function Contact() {
@@ -57,6 +58,7 @@ export default function Contact() {
       const data = await res.json()
       if (data.success === 'true' || data.success === true) {
         setSubmitted(true)
+        trackLead()
       } else {
         throw new Error(data.message || 'Submission failed')
       }

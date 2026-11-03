@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import {
-  SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM, SOCIAL_TIKTOK,
+  SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM, SOCIAL_TIKTOK, SOCIAL_LINKEDIN,
   CONTACT_EMAIL, CONTACT_PHONE, CONTACT_ADDRESS,
 } from '../config'
 import { rooms } from '../config'
+import { OPEN_COOKIE_SETTINGS } from '../tracking'
 import './styling/Footer.css'
 
 const SOCIALS = [
@@ -36,9 +37,22 @@ const SOCIALS = [
       </svg>
     ),
   },
+  {
+    label: 'LinkedIn',
+    href: SOCIAL_LINKEDIN,
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    ),
+  },
 ]
 
-const NAV_KEYS = ['home', 'about', 'amenities', 'gallery', 'contact']
+const NAV_KEYS = ['home', 'about', 'amenities', 'gallery', 'blog', 'contact']
+// Blog is its own page; the rest are sections of the homepage.
+const navHref = (k) => (k === 'blog' ? '/blog' : `#${k}`)
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -68,7 +82,7 @@ export default function Footer() {
             <h4 className="footer__col-title">{t('footer.navigate')}</h4>
             <ul>
               {NAV_KEYS.map(k => (
-                <li key={k}><a href={`#${k}`}>{t(`nav.${k}`)}</a></li>
+                <li key={k}><a href={navHref(k)}>{t(`nav.${k}`)}</a></li>
               ))}
             </ul>
           </div>
@@ -100,7 +114,15 @@ export default function Footer() {
           <div className="footer__bottom-links">
             <a href="#">{t('footer.privacy')}</a>
             <a href="#">{t('footer.terms')}</a>
-            <a href="#">{t('footer.cookies')}</a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault()
+                window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS))
+              }}
+            >
+              {t('footer.cookies')}
+            </a>
           </div>
         </div>
       </div>
